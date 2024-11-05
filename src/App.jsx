@@ -16,7 +16,7 @@ const App = () => {
       <Header onButtonClick={handleButton}/>
       <SCard onButtonClick={handleButton}/>
       
-      <Anleitung/>
+      {/* <Anleitung/> */}
       
       <PCard onButtonClick={handleButton}/>
     </div>
