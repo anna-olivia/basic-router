@@ -1,0 +1,25 @@
+.background {
+  height: 40px;
+  width: 48px;
+  background-color: #fff;
+  position: absolute;
+  right: 60px;
+  top: 38px;
+}
+
+.logo {
+  height: 80px;
+  width: 100px;
+  object-fit: contain;
+  z-index: 100;
+  position: absolute;
+  right: 25px;
+  top: 20px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.2);
+  border-radius: 1rem;
+}

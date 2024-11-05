@@ -1,0 +1,53 @@
+@font-face {
+  font-family: 'londrina';
+  src: url('./assets/fonts/LondrinaSketch-Regular.woff2') format('woff2'),
+     url('./assets/fonts/LondrinaSketch-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+ 
+}
+
+@font-face {
+  font-family: 'merri';
+  src: url('./assets/fonts/MerriweatherSans-Regular.woff2') format('woff2'),
+      url('./assets/fonts/MerriweatherSans-Regular.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+}
+
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #05445E;
+  --secondary-color: #D4F1F4; 
+  --tertiar-color: #0d98ba; 
+  --complementary-color: #e68519;
+  --font-size-base: 16px;
+  --font-family-base: 'merri', sans-serif;
+  --font-family-headings: 'londrina', sans-serif;
+}
+body {
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-base);
+  height: 100vh;
+ /* background: linear-gradient(90deg, var(--primary-color) 0%, var(--tertiar-color) 35%, var(--secondary-color) 100%); */
+ /* background-color: var(--complementary-color); */
+ background: url(./assets/images/welle.svg);
+ background-size: cover;
+ background-repeat: no-repeat;
+ overflow: hidden;
+}
+
+h1,h2,h3,h4,h5,h6 {
+ font-family: var(--font-family-headings); 
+}
+
+button {
+  font-family: var(--font-family-base);
+}
