@@ -1,0 +1,20 @@
+.wrapper {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    padding: 1rem;
+    width: 100%;
+
+  }
+  
+  .wrapper h2 {
+    display: block;
+    margin-bottom: 0.05rem;
+  }
+  
+  .wrapper p {
+    display: block;
+    width: 100%;
+    padding: 0.5rem;
+  }
+
+  

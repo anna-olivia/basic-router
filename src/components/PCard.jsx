@@ -1,5 +1,6 @@
-import styles from './Card.module.css';
+import styles from '../styles/Card.module.css';
 import pirate from '../assets/images/pirate_640.png';
+import { Link } from 'react-router-dom';
 
 const PCard =({onButtonClick}) => {
     return (
@@ -8,8 +9,8 @@ const PCard =({onButtonClick}) => {
         <img src={pirate} alt="Pirat" />
         <div className={styles.content}>
             <h2>Piraten</h2>
-            <p>Wage dich in den Kampf gegen die berüchtigten Piratas</p>
-            <button onClick={onButtonClick}>Start</button>
+            <p>kämpfe jetzt gegen die Piratas</p>
+            <Link to="/spiel" className={styles.button}>Start</Link>
         </div>
         </div>
         </>
