@@ -1,0 +1,62 @@
+ .schiffe {
+    display: flex;
+    /* justify-content: center; */
+    flex-wrap: wrap; 
+    margin-top: 3rem;
+    /* gap: 1.5rem; */
+    justify-content: space-around;
+    /* border: 2px solid red; */
+    position: relative;
+  }
+.schiffe h2 {
+    /* border: 1px solid blue; */
+    height: 260px;
+    position: absolute;
+    writing-mode: vertical-lr;
+    text-orientation:upright;
+    color: var(--complementary-color);
+    top: 5rem;
+
+}
+
+.schiffe h2:nth-of-type(1) {
+    left: 7%;
+    
+}
+.schiffe h2:nth-of-type(2) {
+    right: 7%;
+    
+}
+
+  .schiffe section {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+        margin:5rem;
+        
+         
+
+  }
+
+  .schiffe div {
+    border: 2px dotted var(--secondary-color);
+    height: 150px;
+    width: 150px;
+    object-fit: contain;
+  }
+
+  .stack {
+    display: flex;
+    /* border: 1px solid red; */
+    justify-content: space-around;
+    position: relative;
+  }
+
+  .stack div {
+    height: 250px;
+    width: 200px;
+    border: 2px dotted var(--secondary-color)
+  }
+

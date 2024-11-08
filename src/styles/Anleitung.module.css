@@ -44,7 +44,8 @@
  } 
   
  span a {
-  color: var(--complementary-color)
+  color: var(--complementary-color);
+
  }
 
 

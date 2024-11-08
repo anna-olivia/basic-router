@@ -2,7 +2,7 @@ import styles from '../styles/Card.module.css';
 import pirate from '../assets/images/pirate_640.png';
 import { Link } from 'react-router-dom';
 
-const PCard =({onButtonClick}) => {
+const PCard =() => {
     return (
         <>
         <div className={styles.container}>
