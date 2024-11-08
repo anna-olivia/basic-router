@@ -5,16 +5,12 @@ import styles from '../styles/Landing.module.css';
 
 
 const Landing = () => {
-  const handleButton = () => {
-    alert("geklickt")
-    // später mit routes arbeiten
-  }
-
+  
   return (
     <div className={styles.main}>
       <Outlet />
-      <SCard onButtonClick={handleButton}/>
-      <PCard onButtonClick={handleButton}/>
+      <SCard/>
+      <PCard/>
     </div>
   );
 };

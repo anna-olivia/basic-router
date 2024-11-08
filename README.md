@@ -1,10 +1,12 @@
 # Demo basic React-Router-App für ein digitales Kartenspiel "Piratas" 
 
  In dieser WebApp namens Piratas kann man ein Kartenspiel digital spielen.
+ Das Kartenspiel ist ein digitaler Clone des Kartenspiels "Piratatak" von Djeco von den Authoren/Designern Grégory Kirszbaum & Alex Sanders.
+ Das Kartendesign und die Anleitung des analogen Spiels sind Vorlage dieses Projekts - Siehe auch [Piratatak](https://youtu.be/bbb5B-n3SrE)
 
 ![App-vorschau](./src/assets/images/vorschau.png)
 ![Responsiv-vorschau](./src/assets/images/vorschau-responsive.png)
-
+![Spiel-vorschau](./src/assets/images/gif)
 ## Technologien
 
 - **Frontend:**
@@ -24,14 +26,24 @@ basic-router/
 ├── src/
 │   ├── assets/
 │   ├── components/
-│   │   ├── Anleitung.jsx
-│   │   ├── Card.module.css
 │   │   ├── Header.jsx
-│   │   ├── Header.module.css
-│   │   ├── Landing.module.css
 │   │   ├── PCard.jsx
 │   |   └── SCard.jsx
-|   ├── App.jsx
+|   ├── routes/
+│   │   ├── Anleitung.jsx
+│   │   ├── Landing.jsx
+│   │   ├── RootLayout.jsx
+│   |   └── Spielfeld.jsx
+|   |
+|   ├── styles/
+│   │   ├── Anleitung.module.css
+│   │   ├── Button.module.css
+│   │   ├── Card.module.css
+│   │   ├── Header.module.css
+│   │   ├── Landing.module.css
+│   |   └── Modal.module.css
+|   |
+|   |
 |   ├── index.css
 |   └── main.jsx
 |
