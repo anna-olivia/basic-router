@@ -1,7 +1,9 @@
 import styles from "../styles/Spielfeld.module.css";
 import Schiff from "../components/Schiff";
 import Stapel from "../components/Stapel";
-import Sammlung from "../components/Sammlung";
+import Spieler1 from "../components/Spieler1";
+import Spieler2 from "../components/Spieler2";
+
 import Deck from "../components/Deck";
 const Spiel = () => {
   return (
@@ -14,12 +16,14 @@ const Spiel = () => {
       {/* props um unterschiedliche player zu haben */}
       </div>
 <div className={styles.stack}>
-<Deck />
-{/* hier aufgedeckte KArten */}
+<Spieler1/>
       <Stapel />
       {/* Ziehstapel */}
-      <Sammlung/>
+{/* hier aufgedeckte KArten */}
+<Deck />
+      
       {/* "guten" Karten */}
+      <Spieler2/>
       </div>
             </>
 

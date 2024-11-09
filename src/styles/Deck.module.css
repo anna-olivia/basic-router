@@ -1,0 +1,21 @@
+div.deck {
+    background-color: var(--secondary-color);
+    border: 2px solid var(--secondary-color);
+    border-radius: 5%;
+    box-shadow: 5px 5px 5px rgba(9, 99, 121, 0.428);
+    text-align: center;
+    padding: 1.5rem
+}
+
+.deck figure {
+
+color: var(--primary-color);
+}
+.deck img {
+    width: 100%;
+    object-fit: contain;
+}
+
+.deck figcaption {
+    padding-top: 5%;
+}

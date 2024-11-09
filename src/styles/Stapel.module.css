@@ -1,4 +1,23 @@
-.stapel {
+div.stapel {
     position: absolute;
-    bottom: 25%;
+    bottom: 150%;
+    background-color: #096379;
+    border: 2px solid #09637a;
+    border-radius: 5%;
+    box-shadow: 5px 5px 5px rgba(9, 99, 121, 0.428);
+    text-align: center;
+    padding: 1.5rem
+}
+
+.stapel figure {
+
+color: var(--secondary-color);
+}
+.stapel img {
+    width: 100%;
+    object-fit: contain;
+}
+
+.stapel figcaption {
+    padding-top: 15%;
 }

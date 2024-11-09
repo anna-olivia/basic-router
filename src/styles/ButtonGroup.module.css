@@ -1,0 +1,25 @@
+.buttonGroup {
+    display: flex;
+    gap: 0.5rem;
+    /* border: 2px solid red; */
+    position: absolute;
+    bottom: 10%;
+    z-index: 10;
+    
+}
+
+button {
+    cursor: pointer;
+    font: inherit;
+    padding: 0.5rem 1.5rem 0.3rem;
+    border: none;
+    border-radius: 4px;
+    background-color: var(--complementary-color);
+    color: #fff;
+    box-shadow: 5px 5px 5px rgba(9, 99, 121, 0.428);
+   
+}
+button:hover {
+    background-color: var(--tertiar-color);
+    color: var(--primary);
+}
