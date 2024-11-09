@@ -1,0 +1,28 @@
+div.spieler2 {
+    /* background-color: #096379; */
+    background-color: var(--spieler2);
+    border: 2px solid var(--spieler2);
+    border-radius: 5%;
+    box-shadow: 5px 5px 5px var(--shadow);
+    text-align: center;
+    padding: 1.5rem;
+    /* width: 330px;
+    height: 260px; */
+}
+
+.spieler2 figure {
+
+color: var(--spieler2);
+}
+.spieler2 img {
+    width: 100%;
+    object-fit: contain;
+    filter:brightness(1.5);
+    border-radius: 5%;
+
+}
+
+.spieler2 figcaption {
+    background-color: white;
+    border-radius: 1.5rem;
+}

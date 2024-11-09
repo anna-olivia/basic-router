@@ -1,0 +1,25 @@
+div.spieler1 {
+    background-color: var(--spieler1);
+    border: 2px solid var(--spieler1);
+    border-radius: 5%;
+    box-shadow: 5px 5px 5px var(--shadow);
+    text-align: center;
+    padding: 1.5rem;
+}
+
+.spieler1 figure {
+
+color: var(--spieler1);
+}
+.spieler1 img {
+    width: 100%;
+    object-fit: contain;
+    filter:brightness(1.5);
+    border-radius: 5%;
+
+}
+
+.spieler1 figcaption {
+    background-color: white;
+    border-radius: 1.5rem;
+}

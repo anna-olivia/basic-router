@@ -14,18 +14,24 @@
     position: absolute;
     writing-mode: vertical-lr;
     text-orientation:upright;
-    color: var(--complementary-color);
+    text-align: justify;
+    /* line-height: 1.5em; */
+    /* letter-spacing: 0.05px; */
     top: 5rem;
+    background-color: white;
+    border-radius: 1.5rem;
+    
 
 }
 
 .schiffe h2:nth-of-type(1) {
     left: 7%;
+    color: var(--spieler1);
     
 }
 .schiffe h2:nth-of-type(2) {
     right: 7%;
-    
+    color: var(--spieler2);
 }
 
   .schiffe section {
@@ -34,7 +40,7 @@
         grid-template-rows: repeat(2, 1fr);
         grid-column-gap: 0px;
         grid-row-gap: 0px;
-        margin:5rem;
+        margin:2.5%;
         
          
 
