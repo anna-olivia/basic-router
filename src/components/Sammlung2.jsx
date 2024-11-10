@@ -1,12 +1,11 @@
 import styles from '../styles/Sammlung.module.css'
 
-const Sammlung2 = () => {
+const Sammlung2 = ({gold, kanone}) => {
     return (
         <div className={styles.sammlung}>
             <ul>
-                <li>Goldmünzen:{}</li>
-                <li>Kanonen:{}</li>
-                <li>Schiffteile von Spieler 1: {}</li>
+                <li>Goldmünzen:{gold}</li>
+                <li>Kanonen:{kanone}</li>
             </ul>
         </div>
     );

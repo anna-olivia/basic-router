@@ -1,12 +1,14 @@
 import styles from "../styles/Stapel.module.css";
 import back from '../assets/images/logo_640.png'
-const Stapel = () => {
+const Stapel = ({onZiehen}) => {
     return (
         <div className={styles.stapel}>
             <figure>
             <img src={back} alt="Rückseite der Karte auf Stapel" />
-            <figcaption>Ich bin der Stapel - klick mich um Karte zu ziehen</figcaption>
+            <figcaption>Kartenstapel </figcaption>
             </figure>
+            <br />
+            <button onClick={onZiehen}>Ziehen</button>
         </div>
     );
 };
