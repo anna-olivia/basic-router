@@ -12,7 +12,7 @@ import pirate from '../assets/images/pirate_640.png';
 import gold from '../assets/images/gold.svg';
 import kanone from '../assets/images/kanone.svg';
 import schiffsteil from '../assets/images/schiffsteil.svg';
-import colors from '../styles/Schiffsteile.module.css'
+
 
 const set = [
   { type: 'gold', image: gold },
@@ -26,7 +26,7 @@ const Spiel = () => {
   const [currentGold, setCurrentGold] = useState(0);
   const [currentKanone, setCurrentKanone] = useState(0);
   const [randomKarte, setRandomKarte] = useState(null);
-  const [transparent, setTransparent] = useState("");
+  const [transparentIndices, setTransparentIndices] = useState([]);
 
   const addClickHandler = () => {
     const getRandomKarte = set[Math.floor(Math.random() * set.length)];
@@ -45,7 +45,14 @@ const Spiel = () => {
         setCurrentKanone(prevKanone => prevKanone + 1);
         break;
         case 'schiffsteil':
-          setTransparent(".transparent");
+    
+          setTransparentIndices(prevIndices => {
+            const newIndex = prevIndices.length;
+            if (newIndex < 6) { //  es gibt 6 Schiffsteile
+              return [...prevIndices, newIndex];
+            }
+            return prevIndices; // Wenn alle Teile bereits transparent sind
+          });
           break;
       case 'pirate':
         if(currentKanone > 0) {
@@ -64,10 +71,9 @@ const Spiel = () => {
     <>
       <div className={styles.schiffe}>
         <h2>Spieler 1</h2>
-        <Schiff1/>
-        {/* vielleicht erstmal simple mit visibility arbeiten bei Schiffkarte gezogen mit Teile Abgleich */}
+        <Schiff1 transparentIndices={transparentIndices}/>
         <h2> Spieler 2</h2>
-        <Schiff2 className={transparent} />
+        <Schiff2 transparentIndices={transparentIndices}/>
       </div>
       <div className={styles.stack}>
         <Spieler1 />

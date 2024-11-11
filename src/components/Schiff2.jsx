@@ -1,20 +1,14 @@
-import teil2a from '../assets/images/schiff2a.svg';
-import teil2b from '../assets/images/schiff2b.svg'
-import teil2c from '../assets/images/schiff2c.svg'
-import styles from '../styles/Schiffsteile.module.css';
+import styles from "../styles/Schiffsteile.module.css";
 
-const Schiff2 = () => {
-    return(
-        <section className={styles.teile2}>
-        <div className={styles.transparent}></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div> 
-        
-      </section>
-    );
+const Schiff2 = ({ transparentIndices}) => {
+  const schiffsteile = ['2a', '2b','2c', '2d','2e','2f'];
+  return (
+    <section className={styles.teile2}>
+    {schiffsteile.map((teil,index)=> <div key={teil} className={transparentIndices.includes(index) ? styles.transparent : ''}>
+      {teil}
+    </div>)}
+    </section>
+  );
 };
 
 export default Schiff2;
