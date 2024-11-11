@@ -4,8 +4,8 @@ const Sammlung1 = ({gold,kanone}) => {
     return (
         <div className={styles.sammlung1}>
             <ul>
-                <li>Goldmünzen:{gold}</li>
-                <li>Kanonen:{kanone}</li>
+                <li>Goldmünzen: {gold}</li>
+                <li>Kanonen: {kanone}</li>
             </ul>
         </div>
     );

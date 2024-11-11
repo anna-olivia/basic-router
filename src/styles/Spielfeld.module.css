@@ -58,11 +58,13 @@
     /* border: 1px solid red; */
     justify-content: space-around;
     position: relative;
+  
   }
 
   .stack div {
     height: 250px;
     width: 200px;
-    border: 2px dotted var(--secondary-color)
+    /* border: 2px dotted var(--secondary-color) */
   }
+  
 

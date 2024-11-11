@@ -1,7 +1,5 @@
 import styles from '../styles/Deck.module.css';
-import pirate from '../assets/images/pirate_640.png';
-// import gold from '../assets/images/gold.jpeg';
-// import kanone from '../assets/images/kanone.jpeg';
+import schatz from '../assets/images/schatz.svg';
 
 import Buttons from './Buttons';
 
@@ -21,7 +19,7 @@ const Deck = ({karte}) => {
                 <figcaption>Gezogene Karte{karte.type}</figcaption>
             </figure>): (
                 <figure>
-                    <img src={pirate} alt="Pirat" />
+                    <img src={schatz} alt="Schatz" />
                     <figcaption>Ziehe eine Karte vom obigen Stapel</figcaption>
                 </figure>
             )
