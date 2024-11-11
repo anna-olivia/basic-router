@@ -28,8 +28,9 @@
   --secondary-color: #D4F1F4; 
   --tertiar-color: #0d98ba; 
   --complementary-color: #e68519;
-  --spieler2:#9233FF;
   --spieler1:#7700ff;
+  --spieler2:#9233FF;
+
   --shadow: rgba(9, 99, 121, 0.428);
   --font-size-base: 16px;
   --font-family-base: 'merri', sans-serif;

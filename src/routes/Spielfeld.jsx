@@ -1,6 +1,7 @@
 import { useState } from "react";
 import styles from "../styles/Spielfeld.module.css";
-import Schiff from "../components/Schiff";
+import Schiff1 from "../components/Schiff1";
+import Schiff2 from "../components/Schiff2";
 import Stapel from "../components/Stapel";
 import Spieler1 from "../components/Spieler1";
 import Spieler2 from "../components/Spieler2";
@@ -53,9 +54,10 @@ const Spiel = () => {
     <>
       <div className={styles.schiffe}>
         <h2>Spieler 1</h2>
-        <Schiff />
+        <Schiff1 />
+        {/* vielleicht erstmal simple mit visibility arbeiten bei Schiffkarte gezogen mit Teile Abgleich */}
         <h2> Spieler 2</h2>
-        <Schiff />
+        <Schiff2 />
       </div>
       <div className={styles.stack}>
         <Spieler1 />

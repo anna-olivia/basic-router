@@ -1,3 +1,17 @@
-div.sammlung {
-    
+div.sammlung1 ul, div.sammlung2 ul{
+    position: absolute;
+    color: #fff;
+    padding: 0.5rem;
+    border-radius: 4px;
+}
+
+div.sammlung1 ul {
+    left: 18%;
+    background-color: var(--spieler1);
+}
+
+div.sammlung2 ul {
+    right: 8%;
+    background-color: var(--spieler2);
+
 }

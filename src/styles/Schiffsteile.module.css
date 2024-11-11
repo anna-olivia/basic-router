@@ -1,0 +1,21 @@
+.teile1, .teile2 {
+background: url(../assets/images/schiff2.svg);
+background-size: 450px 300px;
+background-repeat: no-repeat;
+width: 450px;
+height: 300px;
+
+}
+
+.teile1 div {
+    background-color: var(--spieler1);
+}
+
+.teile2 div {
+    background-color: var(--spieler2);
+}
+
+div.transparent {
+    background-color: transparent;
+}
+/* klasse kommt hinzu wenn karte mit schiffteil gezogen wurde */

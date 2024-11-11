@@ -2,7 +2,7 @@ import styles from '../styles/Sammlung.module.css'
 
 const Sammlung1 = ({gold,kanone}) => {
     return (
-        <div className={styles.sammlung}>
+        <div className={styles.sammlung1}>
             <ul>
                 <li>Goldmünzen:{gold}</li>
                 <li>Kanonen:{kanone}</li>
