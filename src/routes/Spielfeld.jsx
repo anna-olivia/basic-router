@@ -1,5 +1,6 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import styles from "../styles/Spielfeld.module.css";
+import styledCards from '../styles/Deck.module.css';
 import Schiff1 from "../components/Schiff1";
 import Schiff2 from "../components/Schiff2";
 import Stapel from "../components/Stapel";
@@ -7,37 +8,57 @@ import Spieler1 from "../components/Spieler1";
 import Spieler2 from "../components/Spieler2";
 import Sammlung1 from "../components/Sammlung1";
 import Sammlung2 from "../components/Sammlung2";
-import Deck from "../components/Deck";
 import pirate from '../assets/images/pirate_640.png';
 import gold from '../assets/images/gold.svg';
 import kanone from '../assets/images/kanone.svg';
 import schiffsteil from '../assets/images/schiffsteil.svg';
 
-
-const set = [
-  { type: 'gold', image: gold },
-  { type: 'kanone', image: kanone },
-  { type: 'pirate', image: pirate },
-  { type: 'schiffsteil', image: schiffsteil },
-
-];
+import schatz from '../assets/images/schatz.svg';
 
 const Spiel = () => {
   const [currentGold, setCurrentGold] = useState(0);
   const [currentKanone, setCurrentKanone] = useState(0);
-  const [randomKarte, setRandomKarte] = useState(null);
+  // const [randomKarte, setRandomKarte] = useState(null);
   const [transparentIndices, setTransparentIndices] = useState([]);
+  const [karten, setKarten] = useState([])
+  const [isFetching, setIsFetching] = useState(false);
+  const [error, setError] = useState(null);
 
-  const addClickHandler = () => {
-    const getRandomKarte = set[Math.floor(Math.random() * set.length)];
-    setRandomKarte(getRandomKarte);
-    addChangeHandler(getRandomKarte);
-//     beim Klicken hier auch addChangeHandler aufrufen
-// überarbeiten: der abzug der münzen etc. sollte vorm weiteren klicken schon angezeigt werden vor allem am anfang lansam - schlechte performance --> backend implementieren und weitere hooks - useEffekt
-  }
+  
+ 
+  
+      async function fetchData(){
+        setIsFetching(true);
+        setError(null);
+        try {
+          const response = await fetch("http://localhost:8080/karten");
+          if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+          }
+          const resData = await response.json();
+          const randomKarte = resData.karten[Math.floor(Math.random() * resData.karten.length)];
+          setKarten(randomKarte);
+          addChangeHandler(randomKarte);
+        } catch (e) {
+          setError(e.message || "Irgendwas stimmt nicht!");
+        } finally {
+          setIsFetching(false);
+        }
+      }
+    
+    
 
-  const addChangeHandler = (karte) => {
-    switch(karte.type) {
+    const addClickHandler = () => {
+
+      fetchData();
+    
+    }
+    useEffect(() => {
+      fetchData();
+    }, []);
+
+  const addChangeHandler = (randomKarte) => {
+    switch(randomKarte.type) {
       case 'gold':
         setCurrentGold(prevGold => prevGold + 1);
         break;
@@ -82,7 +103,33 @@ const Spiel = () => {
           kanone={currentKanone}
         />
         <Stapel onZiehen={addClickHandler} />
-        <Deck karte={randomKarte} />
+        {!isFetching && (
+        <div className={styledCards.deck}>
+        
+        <figure>
+           <img src={karten.image} alt="Ich zeige die gezogenen Karten an" />
+           {/* {}karten.image stimmt nicht - bild wird nicht angezeigt - pfad kontrollieren etc. */}
+                <figcaption>Gezogene Karte{karten.type}</figcaption>
+        </figure>
+            
+          
+        </div>
+      )}
+      {error && (<div>Error: {error} </div>)}
+      {isFetching && (
+       <div className={styledCards.deck}>
+        
+       <figure>
+           <img src={schatz} alt="Schatz" />
+           <figcaption>Ziehe eine Karte vom obigen Stapel</figcaption>
+       </figure>
+     </div>
+      )}
+      
+    
+      
+
+
         <Spieler2 />
         <Sammlung2/>
       </div>
