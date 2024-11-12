@@ -6,7 +6,9 @@
 
 ![App-vorschau](./src/assets/images/vorschau.png)
 ![Responsiv-vorschau](./src/assets/images/vorschau-responsive.png)
-![Spiel-vorschau](./src/assets/images/gif)
+![Spielfeld-vorschau](./src/assets/images/vorschau_spielfeld.png)
+![Spiel-vorschau](./src/assets/images/vorschau-spiel.png)
+
 ## Technologien
 
 - **Frontend:**
@@ -16,7 +18,9 @@
 
 
 ## To do 
-- bis jetzt nur die Landing
+- code säubern, aufräumen, sortieren !!! 
+- Spieler1 und 2 auslagern
+- backend implementieren um Performance zu verbessern
 
 ## Projektstruktur
 

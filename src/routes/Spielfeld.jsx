@@ -33,7 +33,7 @@ const Spiel = () => {
     setRandomKarte(getRandomKarte);
     addChangeHandler(getRandomKarte);
 //     beim Klicken hier auch addChangeHandler aufrufen
-// überarbeiten: der abzug der münzen etc. sollte vorm weiteren klicken schon angezeigt werden
+// überarbeiten: der abzug der münzen etc. sollte vorm weiteren klicken schon angezeigt werden vor allem am anfang lansam - schlechte performance --> backend implementieren und weitere hooks - useEffekt
   }
 
   const addChangeHandler = (karte) => {

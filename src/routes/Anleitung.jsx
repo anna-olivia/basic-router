@@ -11,9 +11,15 @@ import MenuBookIcon from "@mui/icons-material/MenuBook";
 const Anleitung = () => {
   return (
     <Modal>
-      <div className={containerStyle.wrapper}>
-        <h2>Anleitung</h2>
-        
+      < div className={containerStyle.wrapper}>
+      <section className={containerStyle.header}>
+        <h1>Anleitung</h1>
+        <section className={styles.actions}>
+          <Link to="/" className={styles.button}>
+            Zurück
+          </Link>
+          </section>
+        </section>
           <ul>
             <li>
               <TagFacesIcon /> 5-99 Jahre
@@ -34,7 +40,7 @@ const Anleitung = () => {
               und legt sie verdeckt als Stapel in die Tischmitte.
             </li>
           </ul>
-          <div className={containerStyle.anleitung}>
+      
           <section >
             <p>
               <span>Spielverlauf:</span> Die Spieler sind im Uhrzeigersinn
@@ -103,14 +109,7 @@ const Anleitung = () => {
             <span>Die Anleitung stammt von dem <a href="https://youtu.be/bbb5B-n3SrE">analogen Kartenspiel "Piratatak"</a> von Grégory Kirszbaum
             und Alex Sanders</span>
           </section>
-         
-        </div>
-
-        <section className={styles.actions}>
-          <Link to="/" className={styles.button}>
-            Zurück
-          </Link>
-        </section>
+        
       </div>
     </Modal>
   );
