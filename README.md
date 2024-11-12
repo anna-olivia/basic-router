@@ -1,4 +1,4 @@
-# Demo basic React-Router-App für ein digitales Kartenspiel "Piratas" 
+# Ein digitales Kartenspiel "Piratas" 
 
  In dieser WebApp namens Piratas kann man ein Kartenspiel digital spielen.
  Das Kartenspiel ist ein digitaler Clone des Kartenspiels "Piratatak" von Djeco von den Authoren/Designern Grégory Kirszbaum & Alex Sanders.
@@ -11,6 +11,9 @@
 
 ## Technologien
 
+- **Demo Backend**
+  - Node + Express
+
 - **Frontend:**
   - React + Vite [¹]
   - React Router
@@ -20,7 +23,7 @@
 ## To do 
 - code säubern, aufräumen, sortieren !!! 
 - Spieler1 und 2 auslagern
-- backend implementieren um Performance zu verbessern
+- addChangeHandler korrigieren und Schiffteile 
 
 ## Projektstruktur
 

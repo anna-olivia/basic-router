@@ -5,7 +5,9 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import Anleitung from "./routes/Anleitung.jsx";
 import RootLayout from "./routes/RootLayout.jsx";
 import Landing from "./routes/Landing.jsx";
-import Spielfeld from './routes/Spielfeld.jsx';
+// import Spielfeld from './routes/Spielfeld.jsx';
+import Spiel from './components/Spiel.jsx';
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -16,7 +18,7 @@ const router = createBrowserRouter([
                    
         ]
        },
-       {path: '/spiel', element: <Spielfeld />}
+       {path: '/spiel', element: <Spiel />}
 
     ],
   },

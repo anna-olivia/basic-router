@@ -1,6 +1,12 @@
 import styles from "../styles/Schiffsteile.module.css";
+import { useGameLogic } from "../hooks/useGameLogik";
 
-const Schiff1 = ({ transparentIndices}) => {
+
+const Schiff1 = () => {
+  const {
+    transparentIndices,
+  } = useGameLogic();
+
   const schiffsteile = ['1a', '1b','1c', '1d','1e','1f'];
   return (
     <section className={styles.teile1}>

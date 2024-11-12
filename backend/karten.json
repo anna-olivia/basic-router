@@ -1,1 +1,1 @@
-{"karten":[{"type":"gold", "image":"../assets/images/gold.svg"}, {"type":"kanone", "image": "../assets/images/kanone.svg"},{"type":"pirate", "image": "../assets/images/pirate_640.png"}, {"type":"schiffsteil", "image": "../assets/images/schiffsteil.png"} ]}
+{"karten":[{"type":"gold", "image":"/src/assets/images/gold.svg"}, {"type":"kanone", "image": "/src/assets/images/kanone.svg"},{"type":"pirate", "image": "/src/assets/images/pirate_640.png"}, {"type":"schiffsteil", "image": "/src/assets/images/schiffsteil.svg"} ]}

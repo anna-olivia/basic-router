@@ -18,7 +18,7 @@ app.use((req, res, next) => {
 
 app.get('/karten', async (req, res) => {
   const storedData = await getStoredData();
-  await new Promise((resolve, reject) => setTimeout(() => resolve(), 1500));
+  await new Promise((resolve, reject) => setTimeout(() => resolve(), 2500));
   
   res.json({ karten: storedData });
 });
